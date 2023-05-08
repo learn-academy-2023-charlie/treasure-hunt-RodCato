@@ -13,11 +13,13 @@ const App = () => {
     "?",
     "?"
   ])
-
+const handleClick = (selectedIndex) => {
+  alert (selectedIndex)
+}
   return (
     <>
       <h1>Treasure Hunt Game</h1>
-     <Square board={board}/>
+     <Square board={board} handleClick={handleClick}/>
       
     </>
   )
