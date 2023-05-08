@@ -14,7 +14,9 @@ const App = () => {
     "?"
   ])
 const handleClick = (selectedIndex) => {
-  alert (selectedIndex)
+  const boardUpdate = [...board];
+  boardUpdate[selectedIndex] = '🙈';
+  setBoard(boardUpdate);
 }
   return (
     <>

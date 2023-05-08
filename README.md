@@ -4,16 +4,17 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 ### 🤔 Remember
 
-- Pseudocode!!
+- Pseudo code!!
 - Ask clarifying questions
 
 ### 📚 User Stories
 
 ### Layout
--App.js: logic (container) maintain all the data, variables, functions to pass to other components.
--Square.js: display (presentational) - shows how to send the component back to the user interface.
+- App.js: logic (container) maintain all the data, variables, functions to pass to other components.
+- Square.js: display (presentational) - shows how to send the component back to the user interface.
 - use console.log() or reference data to display on user interface.
-- As a user, I can see a page with a three by three grid board game with a question mark in each square.
+
+- ✅ As a user, I can see a page with a three by three grid board game with a question mark in each square.
   -branch: Board
   -known: 9 question marks and a square
   -return: 3x3 grid with question marks
@@ -32,10 +33,25 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
         }
 
       ```
-- As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+- ✅ As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+     - branch: index
+     - known:
+     - function: creates an alert message with id
+     - pseudo code: input: index of the selected square, {selectedIndex} output: alert message name: handleClick
+     - function call: onClick attribute on the specific square
+       to prevent the function from being immediately invoked, use anonymous to allow the function to be called after clicking a square onClick={() => {props.handleClick(index)}}
 
-- to prevent the function from immediately invoked, use anonymous to allow the function to 
-- As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
+- ✅ As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji. 
+     - branch: emoji
+     - function: replace alert with emoji on {selectedIndex} for the onClick action
+     - input: 
+     - pseudo code: 
+     - input: index of the selected square, {selectedIndex} 
+     - output: onClick replace question mark with emoji name: handleClick
+     - function call: onClick attribute on the specific square updating the value of an element in an array and setting the state of the board to reflect the change.
+
+
+
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at five and decrements one every time I click on a square that is not the treasure nor the bomb.
