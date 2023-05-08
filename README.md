@@ -9,7 +9,29 @@ As a developer, you are tasked with creating a treasure hunt game. The user will
 
 ### 📚 User Stories
 
+### Layout
+-App.js: logic (container) maintain all the data, variables, functions to pass to other components.
+-Square.js: display (presentational) - shows how to send the component back to the user interface.
+- use console.log() or reference data to display on user interface.
 - As a user, I can see a page with a three by three grid board game with a question mark in each square.
+  -branch: Board
+  -known: 9 question marks and a square
+  -return: 3x3 grid with question marks
+  -process:
+      - iterate across the values in an array and return a square
+      using .map()
+      -reference the value to make a question mark appear
+
+      -added styling to center the grid
+      ```css
+         .grid {
+          display: flex;
+          flex-wrap: wrap;
+          width: 620px;
+          margin: 0 auto;
+        }
+
+      ```
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
